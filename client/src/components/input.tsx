@@ -1,5 +1,5 @@
 type InputType = {
-    className: string
+    className?: string
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
     placeholder: string
     value: string
@@ -8,7 +8,7 @@ type InputType = {
 export default function Input({ className, onChange, placeholder, value }: InputType) {
     return (
         <input
-            className={className}
+            className={className || "border px-3 py-2 rounded-md"}
             onChange={onChange}
             placeholder={placeholder}
             value={value}

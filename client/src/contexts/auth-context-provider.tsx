@@ -1,21 +1,21 @@
 import { createContext, useEffect, useState } from "react"
 import { tryGetLoggedInUser } from "../managers/authentication"
+import { TUser } from "../lib/types"
 
-export const AuthContext = createContext(null)
+type TAuthContext = {
+    user: TUser | null
+}
 
-export default function AuthContextProvider({ children }) {
-    const [user, setUser] = useState(null)
-    console.log(user)
+export const AuthContext = createContext<TAuthContext | null>(null)
 
-    useEffect(() => {
-        async function getUser() {
-            const data = await tryGetLoggedInUser()
+export default function AuthContextProvider({ children }: {
+    children: React.ReactNode
+}) {
+    const [user, setUser] = useState<TUser | null>(null)
 
-            setUser(data)
-        }
+    const handleGetUser = () => tryGetLoggedInUser().then(setUser)
 
-        getUser()
-    }, [])
+    useEffect(() => { handleGetUser() }, [])
 
     return (
         <AuthContext.Provider

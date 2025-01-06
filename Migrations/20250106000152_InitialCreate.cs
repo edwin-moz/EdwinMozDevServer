@@ -56,8 +56,8 @@ namespace EdwinMozDevServer.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     IdentityUserId = table.Column<string>(type: "text", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Url = table.Column<string>(type: "text", nullable: false)
+                    ImageUrl = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -199,7 +199,7 @@ namespace EdwinMozDevServer.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "0f8d3a19-9f46-48ff-869a-0911ace30d1b", "admina@strator.comx", false, false, null, null, null, "AQAAAAIAAYagAAAAEGxQFEU14cCz0bDgT0zLsSgNh+J0cG9/gyqXJ+erxT0XguKKXeWidNrRisFsvTaUkA==", null, false, "cd9da562-4bf4-4616-9481-12f237157cf1", false, "Administrator" });
+                values: new object[] { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "f43c0cfa-a751-4254-8a4e-753f69239d05", "admina@strator.comx", false, false, null, null, null, "AQAAAAIAAYagAAAAEG+9v7CtQpYyrkI6Qql8yVNca/66Ict+ie6O0jU8Wkc9of1w2R4lCfSpO6twMdp8qg==", null, false, "d84c0c44-f0fb-4a2d-916b-1bc501d1730e", false, "Administrator" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

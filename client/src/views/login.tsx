@@ -10,14 +10,12 @@ export default function Login() {
     return (
         <form>
             <Input
-                className="border px-3 py-2 rounded-md"
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="Email"
                 value={email}
             />
 
             <Input
-                className="border px-3 py-2 rounded-md"
                 onChange={(event) => setPassword(event.target.value)}
                 placeholder="Password"
                 value={password}

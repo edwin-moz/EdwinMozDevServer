@@ -34,11 +34,11 @@ namespace EdwinMozDevServer.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -214,13 +214,13 @@ namespace EdwinMozDevServer.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0f8d3a19-9f46-48ff-869a-0911ace30d1b",
+                            ConcurrencyStamp = "f43c0cfa-a751-4254-8a4e-753f69239d05",
                             Email = "admina@strator.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEGxQFEU14cCz0bDgT0zLsSgNh+J0cG9/gyqXJ+erxT0XguKKXeWidNrRisFsvTaUkA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG+9v7CtQpYyrkI6Qql8yVNca/66Ict+ie6O0jU8Wkc9of1w2R4lCfSpO6twMdp8qg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cd9da562-4bf4-4616-9481-12f237157cf1",
+                            SecurityStamp = "d84c0c44-f0fb-4a2d-916b-1bc501d1730e",
                             TwoFactorEnabled = false,
                             UserName = "Administrator"
                         });
